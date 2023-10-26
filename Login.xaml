@@ -1,0 +1,16 @@
+﻿<Window x:Class="wpfwdb.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfwdb"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="usernameTxtbox" HorizontalAlignment="Left" Margin="307,133,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="passwordTxtbox" HorizontalAlignment="Left" Margin="307,199,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="331,239,0,0" VerticalAlignment="Top" Width="69" Height="22" Click="loginBtn_Click"/>
+        <Button x:Name="Backbtn" Content="Back" HorizontalAlignment="Left" Margin="331,275,0,0" VerticalAlignment="Top" Height="22" Width="69" Click="Backbtn_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="wpfwdb.Landing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfwdb"
+        mc:Ignorable="d"
+        Title="Landing" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="343,121,0,0" VerticalAlignment="Top" Height="42" Width="160" Click="button_Click"/>
+        <Button x:Name="button_Copy" Content="Register" HorizontalAlignment="Left" Margin="343,0,0,0" VerticalAlignment="Center" Width="160" Height="41" Click="button_Copy_Click"/>
+        <Label x:Name="label" Content="Developed by F.S Mkhize" HorizontalAlignment="Left" Margin="352,266,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

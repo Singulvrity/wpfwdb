@@ -1,0 +1,176 @@
+﻿<Window x:Class="wpfwdb.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfwdb"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="1050"
+        ResizeMode="NoResize" Background="Gray"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid Height="821" Width="1050"
+          HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-3,0,-2.333,1" >
+            <Label Content="Semester Information:"
+            FontWeight="Bold" Foreground="black" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="25"  Width="278" Height="48" Margin="17,2,755,771" />
+
+            <Label x:Name="addSemesterLBL" Content="Add A Semester:"
+            FontWeight="Bold" Foreground="Black" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="17"  Width="191" Height="32" Margin="17,55,842,734" />
+
+            <Label x:Name="plsEnterSemInfoLBL" Content="Please enter the following information regarding the semester:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="White" FontSize="12" Margin="17,92,0,695" Height="34"/>
+
+            <Label x:Name="semesterLBL" Content="Please select with Semester you are in?"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,127,0,664" />
+
+            <ComboBox x:Name="semBox" Margin="304,121,559,660" >
+                <ComboBoxItem Content="Semester 1" HorizontalAlignment="Left" Width="256.666666666667"/>
+                <ComboBoxItem Content="Semester 2" HorizontalAlignment="Left" Width="256.666666666667"/>
+            </ComboBox>
+            <Label x:Name="semWeeksLBL" Content= "Number of weeks in the semester:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,171,0,620"  />
+
+            <TextBox x:Name="semesterWeeksTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="White" Foreground="Black"
+            Width="200" Height="30" Margin="289,166,0,625" Background="Gray" BorderThickness="0,0,0,2" />
+
+            <Label x:Name="semStartDateLBL" Content= "Semester Start Date:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,215,0,576"  />
+
+            <Label x:Name="addSemInfoLBL" Content="Press 'Add Semester Information' to save your semester information."
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="White" FontSize="12" Height="34" Margin="54,271,0,516" />
+
+            <Button x:Name="saveSemesterInfoBtn"
+            Width="156" 
+            Height="30"
+            Background="Orange"
+            Foreground="Black"
+            Content="Add Semester Information" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="168,305,726,486" BorderBrush="#FF30382F" Click="saveSemesterInfoBtn_Click_1"  />
+
+            <Label x:Name="outputSemesterNameLBL" Content="Semester: "
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,105,0,686" />
+
+            <Label x:Name="outputSemesterWeeksLBL" Content= "Number of weeks:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,171,0,620"  />
+
+            <TextBox x:Name="outputSemesterWeeksTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="Orange" Foreground="Black"
+            Width="202" Height="30" Margin="289,172,0,619" Background="Gray" BorderThickness="0,0,0,2" SelectionBrush="DarkGray"  />
+
+            <Label x:Name="outputSemesterStartDateLBL" Content= "Semester Start Date:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="17,215,0,576"  />
+
+            <DatePicker x:Name="dates" Margin="304,215,559,576"/>
+
+            <Label Content="Module Information:"
+            FontWeight="Bold" Foreground="black" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="25"  Width="266" Height="50" Margin="16,347,768,424" />
+
+            <Label Content="Add A Module:"
+            FontWeight="Bold" Foreground="Black" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="17"  Width="176" Height="32" Margin="16,401,858,388" />
+
+            <Label Content="Please enter the following information regarding the module:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="White" FontSize="12" Margin="15,438,0,349" Height="34"/>
+
+            <Label Content="Module code:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="15,473,0,318" />
+
+            <TextBox x:Name="moduleCodeTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="White" Foreground="Black"
+            Width="216" Height="30" Margin="273,473,0,318" Background="Gray" BorderThickness="0,0,0,2" />
+
+            <Label Content= "Module name:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="15,513,0,278"  />
+            <TextBox x:Name="moduleNameTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="White" Foreground="Black"
+            Width="216" Height="30" Margin="273,513,0,278" Background="Gray" BorderThickness="0,0,0,2" />
+
+            <Label Content= "Number of credits:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="15,553,0,238"  />
+
+            <TextBox x:Name="moduleCreditsTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="White" Foreground="Black"
+            Width="216" Height="30" Margin="273,553,0,238" Background="Gray" BorderThickness="0,0,0,2" />
+
+            <Label Content="Number of class hours per week:"
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="Black" FontSize="15" Margin="16,597,0,194" Width="234" Height="30" />
+
+            <TextBox x:Name="moduleClassHoursTB" HorizontalAlignment="Left"
+            TextWrapping="Wrap" VerticalAlignment="Center" BorderBrush="White" Foreground="Black"
+            Width="216" Height="30" Margin="273,597,0,194" Background="Gray" BorderThickness="0,0,0,2" />
+
+            <Label Content="Press 'Add Module' to save your module information."
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            Foreground="White" FontSize="12" Height="28" Margin="15,696,0,97" Width="306" />
+
+            <Button x:Name="addModuleBtn"
+            Width="160" 
+            Height="30"
+            Background="Orange"
+            Foreground="Black"
+            Content="Add Module" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="329,694,561,97" BorderBrush="#FF30382F" Click="addModuleBtn_Click_1"  />
+
+            <Label Content="Added Modules:"
+            FontWeight="Bold" Foreground="Orange"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="17"  Width="176" Height="32" Margin="548,401,326,388" />
+
+            <Label Content="Added Semesters:"
+            FontWeight="Bold" Foreground="Orange"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            FontSize="17"  Width="176" Height="32" Margin="548,126,0,0" />
+
+            <DataGrid x:Name="gridSemesters" HorizontalAlignment="Left" Margin="548,166,0,417" Width="455" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Semester" Binding="{Binding Name}"  />
+                    <DataGridTextColumn Header="Weeks" Binding="{Binding Weeks}" />
+                    <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}"  />
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <DataGrid x:Name="gridModules" HorizontalAlignment="Left" Margin="548,449,0,134" Width="455" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Module Code" Binding="{Binding ModuleCode}"  />
+                    <DataGridTextColumn Header="Module Name" Binding="{Binding ModuleName}"  />
+                    <DataGridTextColumn Header="Credits"  Binding="{Binding Credits}"/>
+                    <DataGridTextColumn Header="Weekly class hours" Binding="{Binding ClassHours}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="712,52,0,0" VerticalAlignment="Top" Height="38" Width="168"/>
+        </Grid>
+    </Grid>
+</Window>
